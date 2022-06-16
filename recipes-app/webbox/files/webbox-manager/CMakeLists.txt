@@ -15,6 +15,10 @@ add_executable(WebboxManager ${SOURCES})
 
 target_link_libraries(WebboxManager libvlc.so)
 
+target_include_directories(WebboxManager PRIVATE /usr/include/libdrm/)
+target_link_libraries(WebboxManager libgbm.so libEGL.so libGLESv2.so libdrm.so)
+target_link_libraries(WebboxManager libgbm.so libwayland-client.so libwayland-egl.so)
+
 #target_link_libraries(WebboxManager pthread.so)
 
 # use local file on development host

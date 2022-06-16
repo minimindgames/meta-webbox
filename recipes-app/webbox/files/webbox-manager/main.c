@@ -13,7 +13,8 @@
 
 static webbox_module *modules[] = {
 //    &webbox_console,
-    &webbox_http,
+//    &webbox_http,
+    &webbox_gui,
 };
 
 static const char manager_socket_name[] = "\0WebboxManager";
